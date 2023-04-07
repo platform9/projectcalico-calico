@@ -19,7 +19,7 @@ ifeq ($(DEV_NULL),true)
 	CONFIG:=$(CONFIG),_config_null.yml
 endif
 
-GO_BUILD_VER?=v0.40
+GO_BUILD_VER?=v0.72.1
 CALICO_BUILD?=calico/go-build:$(GO_BUILD_VER)
 LOCAL_USER_ID?=$(shell id -u $$USER)
 PACKAGE_NAME?=github.com/projectcalico/calico
