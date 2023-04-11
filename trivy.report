@@ -325,3 +325,240 @@ Total: 5 (HIGH: 5, CRITICAL: 0)
 │                  │                │          │                                              │                                     │ decoding                                                    │
 │                  │                │          │                                              │                                     │ https://avd.aquasec.com/nvd/cve-2022-41723                  │
 └──────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴─────────────────────────────────────┴─────────────────────────────────────────────────────────────┘
+projectcalico ➤ client_loop: send disconnect: Broken pipe
+➜  ~ ssh ubuntu@34.222.208.125
+Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.19.0-1022-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Apr 11 07:41:38 UTC 2023
+
+  System load:  0.0                Users logged in:          1
+  Usage of /:   38.5% of 96.73GB   IPv4 address for docker0: 172.17.0.1
+  Memory usage: 31%                IPv4 address for ens5:    172.31.63.13
+  Swap usage:   0%                 IPv4 address for virbr0:  192.168.122.1
+  Processes:    139
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+ * Introducing Expanded Security Maintenance for Applications.
+   Receive updates to over 25,000 software packages with your
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+8 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue Apr 11 06:52:16 2023 from 49.37.50.158
+~ ➤ cd github.com
+github.com ➤ cd projectcalico
+projectcalico ➤ ./scan.sh
+2023-04-11T07:41:50.384Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:41:52.407Z	INFO	Detected OS: redhat
+2023-04-11T07:41:52.407Z	INFO	Detecting RHEL/CentOS vulnerabilities...
+2023-04-11T07:41:52.463Z	INFO	Number of language-specific files: 1
+2023-04-11T07:41:52.463Z	INFO	Detecting gobinary vulnerabilities...
+
+calico/node:latest-amd64 (redhat 8.7)
+
+Total: 0 (HIGH: 0, CRITICAL: 0)
+
+
+usr/bin/calico-node (gobinary)
+
+Total: 4 (HIGH: 4, CRITICAL: 0)
+
+┌───────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬──────────────────────────────────┬──────────────────────────────────────────────────────────────┐
+│      Library      │ Vulnerability  │ Severity │              Installed Version               │          Fixed Version           │                            Title                             │
+├───────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd   │ CVE-2018-1098  │ HIGH     │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2                           │ etcd: Cross-site request forgery via crafted local POST      │
+│                   │                │          │                                              │                                  │ forms                                                        │
+│                   │                │          │                                              │                                  │ https://avd.aquasec.com/nvd/cve-2018-1098                    │
+│                   ├────────────────┤          │                                              ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10                   │ etcd: improper validation of passwords allow an attacker to  │
+│                   │                │          │                                              │                                  │ guess or brute-force...                                      │
+│                   │                │          │                                              │                                  │ https://avd.aquasec.com/nvd/cve-2020-15115                   │
+├───────────────────┼────────────────┤          ├──────────────────────────────────────────────┼──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│ k8s.io/kubernetes │ CVE-2021-25741 │          │ v1.18.12                                     │ 1.19.15, 1.20.11, 1.21.5, 1.22.2 │ kubernetes: Symlink exchange can allow host filesystem       │
+│                   │                │          │                                              │                                  │ access                                                       │
+│                   │                │          │                                              │                                  │ https://avd.aquasec.com/nvd/cve-2021-25741                   │
+│                   ├────────────────┤          │                                              ├──────────────────────────────────┼──────────────────────────────────────────────────────────────┤
+│                   │ CVE-2022-3294  │          │                                              │ 1.22.16, 1.23.14, 1.24.8, 1.25.4 │ kubernetes: node address isn't always verified when proxying │
+│                   │                │          │                                              │                                  │ https://avd.aquasec.com/nvd/cve-2022-3294                    │
+└───────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴──────────────────────────────────┴──────────────────────────────────────────────────────────────┘
+2023-04-11T07:41:53.128Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:41:53.338Z	INFO	Number of language-specific files: 1
+2023-04-11T07:41:53.338Z	INFO	Detecting gobinary vulnerabilities...
+2023-04-11T07:41:53.967Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:41:54.177Z	INFO	Number of language-specific files: 2
+2023-04-11T07:41:54.177Z	INFO	Detecting gobinary vulnerabilities...
+2023-04-11T07:41:54.802Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:41:56.021Z	INFO	Number of language-specific files: 3
+2023-04-11T07:41:56.021Z	INFO	Detecting gobinary vulnerabilities...
+
+opt/cni/bin/calico (gobinary)
+
+Total: 3 (HIGH: 3, CRITICAL: 0)
+
+┌────────────────────────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│              Library               │ Vulnerability  │ Severity │              Installed Version               │ Fixed Version  │                            Title                            │
+├────────────────────────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ github.com/containernetworking/cni │ CVE-2021-20206 │ HIGH     │ v0.8.0                                       │ 0.8.1          │ containernetworking-cni: Arbitrary path injection via type  │
+│                                    │                │          │                                              │                │ field in CNI configuration                                  │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2021-20206                  │
+├────────────────────────────────────┼────────────────┤          ├──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd                    │ CVE-2018-1098  │          │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2         │ etcd: Cross-site request forgery via crafted local POST     │
+│                                    │                │          │                                              │                │ forms                                                       │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2018-1098                   │
+│                                    ├────────────────┤          │                                              ├────────────────┼─────────────────────────────────────────────────────────────┤
+│                                    │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10 │ etcd: improper validation of passwords allow an attacker to │
+│                                    │                │          │                                              │                │ guess or brute-force...                                     │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2020-15115                  │
+└────────────────────────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
+
+opt/cni/bin/calico-ipam (gobinary)
+
+Total: 3 (HIGH: 3, CRITICAL: 0)
+
+┌────────────────────────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│              Library               │ Vulnerability  │ Severity │              Installed Version               │ Fixed Version  │                            Title                            │
+├────────────────────────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ github.com/containernetworking/cni │ CVE-2021-20206 │ HIGH     │ v0.8.0                                       │ 0.8.1          │ containernetworking-cni: Arbitrary path injection via type  │
+│                                    │                │          │                                              │                │ field in CNI configuration                                  │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2021-20206                  │
+├────────────────────────────────────┼────────────────┤          ├──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd                    │ CVE-2018-1098  │          │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2         │ etcd: Cross-site request forgery via crafted local POST     │
+│                                    │                │          │                                              │                │ forms                                                       │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2018-1098                   │
+│                                    ├────────────────┤          │                                              ├────────────────┼─────────────────────────────────────────────────────────────┤
+│                                    │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10 │ etcd: improper validation of passwords allow an attacker to │
+│                                    │                │          │                                              │                │ guess or brute-force...                                     │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2020-15115                  │
+└────────────────────────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
+
+opt/cni/bin/install (gobinary)
+
+Total: 3 (HIGH: 3, CRITICAL: 0)
+
+┌────────────────────────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│              Library               │ Vulnerability  │ Severity │              Installed Version               │ Fixed Version  │                            Title                            │
+├────────────────────────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ github.com/containernetworking/cni │ CVE-2021-20206 │ HIGH     │ v0.8.0                                       │ 0.8.1          │ containernetworking-cni: Arbitrary path injection via type  │
+│                                    │                │          │                                              │                │ field in CNI configuration                                  │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2021-20206                  │
+├────────────────────────────────────┼────────────────┤          ├──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd                    │ CVE-2018-1098  │          │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2         │ etcd: Cross-site request forgery via crafted local POST     │
+│                                    │                │          │                                              │                │ forms                                                       │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2018-1098                   │
+│                                    ├────────────────┤          │                                              ├────────────────┼─────────────────────────────────────────────────────────────┤
+│                                    │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10 │ etcd: improper validation of passwords allow an attacker to │
+│                                    │                │          │                                              │                │ guess or brute-force...                                     │
+│                                    │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2020-15115                  │
+└────────────────────────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
+2023-04-11T07:41:56.674Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:41:57.046Z	INFO	Number of language-specific files: 1
+2023-04-11T07:41:57.046Z	INFO	Detecting gobinary vulnerabilities...
+
+calicoctl (gobinary)
+
+Total: 2 (HIGH: 2, CRITICAL: 0)
+
+┌─────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│     Library     │ Vulnerability  │ Severity │              Installed Version               │ Fixed Version  │                            Title                            │
+├─────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd │ CVE-2018-1098  │ HIGH     │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2         │ etcd: Cross-site request forgery via crafted local POST     │
+│                 │                │          │                                              │                │ forms                                                       │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2018-1098                   │
+│                 ├────────────────┤          │                                              ├────────────────┼─────────────────────────────────────────────────────────────┤
+│                 │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10 │ etcd: improper validation of passwords allow an attacker to │
+│                 │                │          │                                              │                │ guess or brute-force...                                     │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2020-15115                  │
+└─────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
+2023-04-11T07:41:57.688Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:41:58.608Z	INFO	Number of language-specific files: 2
+2023-04-11T07:41:58.608Z	INFO	Detecting gobinary vulnerabilities...
+
+usr/bin/kube-controllers (gobinary)
+
+Total: 2 (HIGH: 2, CRITICAL: 0)
+
+┌─────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│     Library     │ Vulnerability  │ Severity │              Installed Version               │ Fixed Version  │                            Title                            │
+├─────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd │ CVE-2018-1098  │ HIGH     │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2         │ etcd: Cross-site request forgery via crafted local POST     │
+│                 │                │          │                                              │                │ forms                                                       │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2018-1098                   │
+│                 ├────────────────┤          │                                              ├────────────────┼─────────────────────────────────────────────────────────────┤
+│                 │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10 │ etcd: improper validation of passwords allow an attacker to │
+│                 │                │          │                                              │                │ guess or brute-force...                                     │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2020-15115                  │
+└─────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
+2023-04-11T07:41:59.247Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:41:59.756Z	INFO	Number of language-specific files: 2
+2023-04-11T07:41:59.756Z	INFO	Detecting gobinary vulnerabilities...
+
+usr/bin/kube-controllers (gobinary)
+
+Total: 2 (HIGH: 2, CRITICAL: 0)
+
+┌─────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│     Library     │ Vulnerability  │ Severity │              Installed Version               │ Fixed Version  │                            Title                            │
+├─────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd │ CVE-2018-1098  │ HIGH     │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2         │ etcd: Cross-site request forgery via crafted local POST     │
+│                 │                │          │                                              │                │ forms                                                       │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2018-1098                   │
+│                 ├────────────────┤          │                                              ├────────────────┼─────────────────────────────────────────────────────────────┤
+│                 │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10 │ etcd: improper validation of passwords allow an attacker to │
+│                 │                │          │                                              │                │ guess or brute-force...                                     │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2020-15115                  │
+└─────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
+2023-04-11T07:42:00.396Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:42:00.400Z	INFO	Number of language-specific files: 2
+2023-04-11T07:42:00.400Z	INFO	Detecting gobinary vulnerabilities...
+
+usr/bin/kube-controllers (gobinary)
+
+Total: 2 (HIGH: 2, CRITICAL: 0)
+
+┌─────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│     Library     │ Vulnerability  │ Severity │              Installed Version               │ Fixed Version  │                            Title                            │
+├─────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd │ CVE-2018-1098  │ HIGH     │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2         │ etcd: Cross-site request forgery via crafted local POST     │
+│                 │                │          │                                              │                │ forms                                                       │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2018-1098                   │
+│                 ├────────────────┤          │                                              ├────────────────┼─────────────────────────────────────────────────────────────┤
+│                 │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10 │ etcd: improper validation of passwords allow an attacker to │
+│                 │                │          │                                              │                │ guess or brute-force...                                     │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2020-15115                  │
+└─────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
+2023-04-11T07:42:01.021Z	INFO	Vulnerability scanning is enabled
+2023-04-11T07:42:01.560Z	INFO	Number of language-specific files: 1
+2023-04-11T07:42:01.560Z	INFO	Detecting gobinary vulnerabilities...
+
+code/calico-typha (gobinary)
+
+Total: 2 (HIGH: 2, CRITICAL: 0)
+
+┌─────────────────┬────────────────┬──────────┬──────────────────────────────────────────────┬────────────────┬─────────────────────────────────────────────────────────────┐
+│     Library     │ Vulnerability  │ Severity │              Installed Version               │ Fixed Version  │                            Title                            │
+├─────────────────┼────────────────┼──────────┼──────────────────────────────────────────────┼────────────────┼─────────────────────────────────────────────────────────────┤
+│ go.etcd.io/etcd │ CVE-2018-1098  │ HIGH     │ v0.5.0-alpha.5.0.20201125193152-8a03d2e9614b │ v3.3.2         │ etcd: Cross-site request forgery via crafted local POST     │
+│                 │                │          │                                              │                │ forms                                                       │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2018-1098                   │
+│                 ├────────────────┤          │                                              ├────────────────┼─────────────────────────────────────────────────────────────┤
+│                 │ CVE-2020-15115 │          │                                              │ 3.3.23, 3.4.10 │ etcd: improper validation of passwords allow an attacker to │
+│                 │                │          │                                              │                │ guess or brute-force...                                     │
+│                 │                │          │                                              │                │ https://avd.aquasec.com/nvd/cve-2020-15115                  │
+└─────────────────┴────────────────┴──────────┴──────────────────────────────────────────────┴────────────────┴─────────────────────────────────────────────────────────────┘
