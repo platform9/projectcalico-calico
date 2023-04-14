@@ -21,14 +21,13 @@ then
        --output "${HOME}/.docker/cli-plugins/docker-buildx"
   chmod +x ~/.docker/cli-plugins/docker-buildx
 fi
-
 if ! command -v triy &> /dev/null
 then
   pushd /tmp || exit
       curl --request GET -L \
            --url 'https://github.com/aquasecurity/trivy/releases/download/v0.18.3/trivy_0.18.3_Linux-64bit.tar.gz' \
            --output trivy.tar.gz
-      tar -xzf trivy.tar.gz "trivy" -C ~/.local/bi
+      tar -xzf trivy.tar.gz "trivy" -C ~/.local/bin/
       chmod +x ~/.local/bin/trivy
   popd || exit
 fi
