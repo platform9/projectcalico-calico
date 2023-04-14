@@ -9,3 +9,8 @@ scan:
 
 push:
 	./push.sh
+
+pre-reqs:
+	./pre-reqs.sh
+
+
