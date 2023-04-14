@@ -6,6 +6,8 @@ JEKYLL_VERSION=pages
 HP_VERSION=v0.2
 DEV?=false
 CONFIG=--config _config.yml
+# extra targets for building, scanning and pushing the images
+include Makefile.include
 ifeq ($(DEV),true)
 	CONFIG:=$(CONFIG),_config_dev.yml
 endif
