@@ -1,0 +1,16 @@
+image:
+	./make.sh
+
+retag:
+	./retag.sh
+
+scan:
+	./scan.sh
+
+push:
+	./push.sh
+
+pre-reqs:
+	./pre-reqs.sh
+
+

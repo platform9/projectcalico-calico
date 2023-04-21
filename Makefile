@@ -6,6 +6,8 @@ JEKYLL_VERSION=pages
 HP_VERSION=v0.2
 DEV?=false
 CONFIG=--config _config.yml
+# extra targets for building, scanning and pushing the images
+include Makefile.include
 ifeq ($(DEV),true)
 	CONFIG:=$(CONFIG),_config_dev.yml
 endif
@@ -19,7 +21,7 @@ ifeq ($(DEV_NULL),true)
 	CONFIG:=$(CONFIG),_config_null.yml
 endif
 
-GO_BUILD_VER?=v0.40
+GO_BUILD_VER?=v0.72.1
 CALICO_BUILD?=calico/go-build:$(GO_BUILD_VER)
 LOCAL_USER_ID?=$(shell id -u $$USER)
 PACKAGE_NAME?=github.com/projectcalico/calico
